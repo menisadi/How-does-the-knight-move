@@ -4,6 +4,10 @@ from tkinter import messagebox
 import chess
 import numpy as np
 
+# Variable to keep track of the last clicked square
+last_clicked_square = None
+last_square_was_toggled = False
+
 
 def how_the_knight_move(square1):
     distances = np.zeros((8, 8))
@@ -46,13 +50,32 @@ def calculate_color(distance, max_distance):
 
 
 def on_square_click(event):
+    global last_clicked_square, last_square_was_toggled
     col = event.x // square_size
     row = 7 - (event.y // square_size)
     square = chess.square(col, row)
 
     if 0 <= col < 8 and 0 <= row < 8:
-        distances_from_square = how_the_knight_move(square)
-        color_chessboard(canvas, distances_from_square)
+        if square == last_clicked_square and last_square_was_toggled:
+            # If the same square is clicked again and it was toggled, reset to black and white
+            for widget in canvas.find_all():
+                canvas.delete(widget)
+            for row in range(8):
+                for col in range(8):
+                    color = "white" if (row + col) % 2 == 0 else "black"
+                    canvas.create_rectangle(
+                        col * square_size,
+                        row * square_size,
+                        (col + 1) * square_size,
+                        (row + 1) * square_size,
+                        fill=color,
+                    )
+            last_square_was_toggled = False
+        else:
+            distances_from_square = how_the_knight_move(square)
+            color_chessboard(canvas, distances_from_square)
+            last_clicked_square = square
+            last_square_was_toggled = True
     else:
         messagebox.showinfo(
             "Invalid Square", "Please click inside the chessboard."
