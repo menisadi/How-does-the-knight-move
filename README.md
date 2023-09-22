@@ -1,54 +1,52 @@
 
-# Your Program's Name
+# Chess Knight's Distance Visualization
 
-**Author:** Your Name  
-**Version:** 1.0.0 (Update this with your program's version number)  
-**Date:** [Insert Date]
+This Python program uses the Tkinter library to create a simple chessboard where you can explore the distances a chess knight can move from a selected square. It visualizes these distances by coloring the squares on the board based on the number of knight's moves required to reach them.
 
-## Overview
+![Chess Knight's Distance Visualization](screenshot.png)
 
-Briefly introduce your program and its purpose. Explain what problem it solves or what functionality it provides.
+## Features
 
-## Table of Contents
+- Click on any square on the chessboard to highlight the reachable squares for a knight placed on that square.
+- The program uses different colors to represent the number of moves required to reach each square.
+- You can toggle the display by clicking on the same square again to reset the chessboard.
 
-1. [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-2. [Usage](#usage)
-    - [Running the Program](#running-the-program)
-    - [Options and Commands](#options-and-commands)
-3. [Examples](#examples)
-4. [Contributing](#contributing)
-5. [License](#license)
+## Prerequisites
 
-## Getting Started
+- Python 3.x
+- Tkinter library
+- NumPy library
 
-### Prerequisites
+## Installation
 
-List any prerequisites that users need to have installed before using your program. This might include specific Python versions, libraries, or other dependencies.
+1. Clone this repository to your local machine using `git clone`.
+2. Make sure you have Python 3.x installed.
+3. Install the required libraries using pip:
 
-### Installation
-
-Explain how to install your program if there are any special installation steps. For example, if your program requires additional Python packages, provide instructions on how to install them using `pip`. You can also include the steps to run the PyInstaller-created executable if that's your preferred distribution method.
-
+   ```bash
+   pip install numpy python-chess
+   
 ## Usage
 
-### Running the Program
 
-Describe how users can run your program. Provide step-by-step instructions, including any command-line arguments or options they can use.
+Run the program by executing python chess_knight_distance.py.
+A window will open displaying the chessboard.
+Click on any square to see how far a knight can move from that square.
 
-### Options and Commands
+## How it Works
 
-List and explain any available command-line options or commands. Include descriptions of what each option or command does and provide examples.
+The program calculates the knight's distance for each square on the chessboard using a 2D NumPy array. It then maps these distances to colors to create a visual representation of the knight's movement range.
+Acknowledgments
 
-## Examples
+This program was created by [Your Name] as a simple visualization tool for understanding how chess knights move on a chessboard.
+License
 
-Provide examples of how to use your program for common tasks. This section can include code snippets, command-line examples, or screenshots to illustrate usage.
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+Contributing
 
-## Contributing
+Contributions are welcome! If you'd like to improve the program or add new features, please open an issue or create a pull request.
+Contact
 
-If you're open to contributions from others, explain how users can contribute to your project. Include guidelines for submitting issues, feature requests, or pull requests.
+If you have any questions or suggestions, feel free to contact.
 
-## License
-
-Specify the license under which your program is distributed. Include a link to the full text of the license if applicable.
+Happy exploring the world of chess knight movements!
