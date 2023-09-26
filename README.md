@@ -2,8 +2,8 @@
 > "How does the knight move?" - Alexandra Botez
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) 
-[![GitHub Release](https://img.shields.io/github/v/release/menisadi/How-does-the-knight-move.svg)](https://github.com/menisadi/How-does-the-knight-move /releases) 
-[![Python Version](https://img.shields.io/badge/python-3.x-brightgreen.svg)](https://www.python.org/downloads/)
+![GitHub Release](https://img.shields.io/github/v/release/menisadi/How-does-the-knight-move.svg)
+![Python Version](https://img.shields.io/badge/python-3.x-brightgreen.svg)
 
 This Python program uses the Tkinter library to create a simple chessboard where you can explore the distances a chess knight can move from a selected square. It visualizes these distances by coloring the squares on the board based on the number of knight's moves required to reach them.
 
