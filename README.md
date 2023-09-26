@@ -43,7 +43,7 @@ If you want to run the program from the source code, follow these steps:
 
 ### Web Version
 
-I've also developed a web-based version. You can access it online by visiting [http://menitm.pythonanywhere.com/](http://menitm.pythonanywhere.com/).
+I've also developed a web-based version. You can access it online by visiting [http://menitm.pythonanywhere.com/](http://menitm.pythonanywhere.com/).   
 Please note that while the web version is functional, it may benefit from some design enhancements, primarily for mobile browsers. It's not currently responsive for smaller screens, and there's room for styling improvements. Your feedback on potential design improvements is always welcome!
 
 ## How it Works
